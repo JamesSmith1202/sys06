@@ -1,12 +1,9 @@
-all: sys06.o
-	gcc -o run sys06.o
-
-sys06.o: sys06.o
-	gcc -c sys06.c
+sys06: sys06.c
+	gcc -o run sys06.c
 
 clean:
-	rm *.o
+	rm -f *.o
 	rm -f *~
 
-run: all
+run: sys06
 	./run
